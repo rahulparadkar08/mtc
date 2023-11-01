@@ -18,13 +18,19 @@ const sequelize = new Sequelize(dbConfig.DB, dbConfig.USER, dbConfig.PASSWORD, {
 const BranchModel = require('./branch.model.js');
 const SessionModel = require('./session.model.js');
 const FeesSetModel = require('./feesSet.model.js');
-
+const ClassModel = require('./class.model.js');
+const CourseModel = require('./course.model.js');
+const BatchModel = require('./batch.model.js');
 
 // Initialize the models and their associations
 const models = {
   Branch: BranchModel(sequelize, Sequelize),
   Session: SessionModel(sequelize, Sequelize),
   FeesSet: FeesSetModel(sequelize, Sequelize),
+  Class: ClassModel(sequelize, Sequelize),
+  Course: CourseModel(sequelize, Sequelize),
+  Batch: BatchModel(sequelize, Sequelize),
+
 
 };
 
